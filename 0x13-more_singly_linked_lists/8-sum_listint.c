@@ -1,19 +1,20 @@
 #include "lists.h"
-
+#include <stdlib.h>
 
 /**
- * sum_listint - Sum all of them
- * @head: Head
- * Return: return 0 if list empty
- */
+ * sum_listint - Sum all of the data (n) in a list.
+ * @head: Address of the first node of the list.
+ * Return: Integer.
+ **/
 
 int sum_listint(listint_t *head)
 {
-int lp = 0;
-while (head != NULL)
-{
-lp += head->n;
-head = head->next;
-}
-return (lp);
+	int total = 0;
+
+	while (head != NULL)
+	{
+		total += head->n;
+		head = head->next;
+	}
+	return (total);
 }
